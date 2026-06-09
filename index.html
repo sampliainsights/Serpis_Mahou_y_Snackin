@@ -147,10 +147,11 @@
 
     .sidebar-campaign {
       margin: 14px 14px 0;
-      background: var(--brand-muted);
-      border: 1px solid var(--brand-muted2);
+      background: transparent;
+      border: 1px solid var(--border-md);
       border-radius: var(--r-md);
-      padding: 12px 14px
+      padding: 12px 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .06)
     }
 
     .sidebar-campaign-label {
@@ -554,7 +555,7 @@
     .section-accent {
       width: 3px;
       height: 18px;
-      background: var(--brand);
+      background: linear-gradient(180deg, var(--accent-100), var(--accent-200));
       border-radius: 2px;
       flex-shrink: 0
     }
@@ -863,7 +864,7 @@
     }
 
     .mini-value.brand {
-      color: var(--brand)
+      color: var(--accent-100)
     }
 
     .mini-value.green {
@@ -1589,7 +1590,7 @@
       display: none;
       background: linear-gradient(135deg, var(--primary-100), var(--primary-200));
       color: #fff;
-      border-radius: var(--r-xl);
+      border-radius: 0 var(--r-xl) var(--r-xl) 0;
       padding: 18px 24px;
       margin-bottom: var(--content-gap)
     }
@@ -2285,9 +2286,9 @@
       </div>
 
       <div class="sidebar-campaign">
-        <div class="sidebar-campaign-label">Campaña activa</div>
+        <div class="sidebar-campaign-label">Campaña</div>
         <div class="sidebar-campaign-title">Serpis, Mahou y Snack'in</div>
-        <div class="sidebar-campaign-sub">Encuesta realizada a usuarios que participaron en la activación</div>
+        <div class="sidebar-campaign-sub">Encuesta realizada a usuarios que participaron en la activación.</div>
         <div class="sidebar-campaign-meta">
           <div class="sc-meta-row">
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none"
@@ -2295,7 +2296,7 @@
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
-            Samplia X Shop Experience · CC Carrefour Alcobendas y Hortaleza
+            Samplia X Shop Experience · CC Carrefour Alcobendas y Hortaleza.
           </div>
           <div class="sc-meta-row">
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none"
@@ -2305,7 +2306,7 @@
               <line x1="8" y1="2" x2="8" y2="6" />
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
-            Del 03 al 09 de junio de 2026
+            Hortaleza: 21 al 28 de mayo · Alcobendas: 03 al 09 de julio.
           </div>
           <div class="sc-meta-row">
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none"
@@ -2314,7 +2315,7 @@
               <path d="M3 6h18" />
               <path d="M16 10a4 4 0 0 1-8 0" />
             </svg>
-            Activación de aperitivo · MAHOU 00, SNACK'IN, SERPIS Nature
+            Activación de aperitivo · MAHOU 00, SNACK'IN, SERPIS Nature.
           </div>
           <!-- Location distribution -->
           <div class="pdist">
@@ -2478,8 +2479,7 @@
         <div class="pdf-hero" id="pdfHero">
           <div>
             <div class="pdf-hero-title">Serpis, Mahou y Snack'in · Samplia X Shop Experience 2026</div>
-            <div class="pdf-hero-sub">Encuesta realizada a usuarios que participaron en la activación · CC Carrefour
-              Alcobendas y Hortaleza · Del 03 al 09 de junio de 2026</div>
+            <div class="pdf-hero-sub">Encuesta realizada a usuarios que participaron en la activación · CC Carrefour Hortaleza (Desde el 21 al 28 de mayo) y Alcobendas (Desde el 03 al 09 de julio)</div>
           </div>
         </div>
 
@@ -2493,7 +2493,7 @@
           <div class="kpi-grid row-gap">
             <div class="kpi-card">
               <div class="kpi-card-accent"
-                style="background:linear-gradient(90deg,var(--brand-dark),var(--primary-100));"></div>
+                style="background:linear-gradient(90deg,var(--accent-100),var(--accent-200));"></div>
               <div class="kpi-icon" style="background:var(--brand-muted);color:var(--primary-100);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2504,12 +2504,12 @@
                 </svg>
               </div>
               <div class="kpi-label">Encuestados</div>
-              <div class="kpi-value" style="color:var(--primary-100);" id="kpiTotal">—</div>
+              <div class="kpi-value" style="color:var(--accent-100);" id="kpiTotal">—</div>
               <div class="kpi-sub">respondieron la encuesta</div>
             </div>
             <div class="kpi-card">
               <div class="kpi-card-accent"
-                style="background:linear-gradient(90deg,var(--primary-100),var(--primary-200));"></div>
+                style="background:linear-gradient(90deg,var(--accent-200),#2563eb);"></div>
               <div class="kpi-icon" style="background:var(--brand-muted);color:var(--primary-100);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2518,12 +2518,12 @@
                 </svg>
               </div>
               <div class="kpi-label">Frec 'Aperitivo'</div>
-              <div class="kpi-value" style="color:var(--primary-100);" id="kpiFrec">—</div>
+              <div class="kpi-value" style="color:var(--accent-100);" id="kpiFrec">—</div>
               <div class="kpi-sub">Toman aperitivo con frecuencia</div>
             </div>
             <div class="kpi-card">
               <div class="kpi-card-accent"
-                style="background:linear-gradient(90deg,var(--primary-200),var(--accent-200));"></div>
+                style="background:linear-gradient(90deg,#2563eb,#1e40af);"></div>
               <div class="kpi-icon" style="background:var(--brand-muted);color:var(--primary-100);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2533,12 +2533,12 @@
                 </svg>
               </div>
               <div class="kpi-label" style="font-size:8px;letter-spacing:.03em;">Recrearon 'Aperitivo'</div>
-              <div class="kpi-value" style="color:var(--primary-100);" id="kpiRecrearon">—</div>
+              <div class="kpi-value" style="color:var(--accent-100);" id="kpiRecrearon">—</div>
               <div class="kpi-sub">Consumieron los 3 productos juntos</div>
             </div>
             <div class="kpi-card">
               <div class="kpi-card-accent"
-                style="background:linear-gradient(90deg,var(--primary-100),var(--accent-100));"></div>
+                style="background:linear-gradient(90deg,var(--accent-200),var(--accent-100));"></div>
               <div class="kpi-icon" style="background:var(--brand-muted);color:var(--primary-100);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2547,12 +2547,12 @@
                 </svg>
               </div>
               <div class="kpi-label">Eval MAHOU 00</div>
-              <div class="kpi-value" style="color:var(--primary-100);" id="kpiMahou">—</div>
+              <div class="kpi-value" style="color:var(--accent-100);" id="kpiMahou">—</div>
               <div id="kpiMahouBench"></div>
             </div>
             <div class="kpi-card">
               <div class="kpi-card-accent"
-                style="background:linear-gradient(90deg,var(--accent-200),var(--primary-200));"></div>
+                style="background:linear-gradient(90deg,#1e40af,var(--accent-100));"></div>
               <div class="kpi-icon" style="background:var(--brand-muted);color:var(--primary-100);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2562,12 +2562,12 @@
                 </svg>
               </div>
               <div class="kpi-label">Eval SNACK'IN</div>
-              <div class="kpi-value" style="color:var(--primary-100);" id="kpiSnackin">—</div>
+              <div class="kpi-value" style="color:var(--accent-100);" id="kpiSnackin">—</div>
               <div id="kpiSnackinBench"></div>
             </div>
             <div class="kpi-card">
               <div class="kpi-card-accent"
-                style="background:linear-gradient(90deg,var(--brand-dark),var(--primary-200));"></div>
+                style="background:linear-gradient(90deg,var(--accent-100),#2563eb);"></div>
               <div class="kpi-icon" style="background:var(--brand-muted);color:var(--primary-100);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2576,7 +2576,7 @@
                 </svg>
               </div>
               <div class="kpi-label">Eval SERPIS</div>
-              <div class="kpi-value" style="color:var(--primary-100);" id="kpiSerpis">—</div>
+              <div class="kpi-value" style="color:var(--accent-100);" id="kpiSerpis">—</div>
               <div id="kpiSerpisBench"></div>
             </div>
           </div>
@@ -2601,21 +2601,23 @@
             </div>
             <div class="card">
               <div class="card-inner">
-                <div class="card-header">
-                  <div class="card-label">Edad</div>
-                  <h3 class="card-question">Distribución por rango de edad</h3>
-                </div>
-                <div style="display:flex;gap:12px;align-items:flex-start;">
-                  <div style="display:flex;flex-direction:column;gap:8px;min-width:100px;flex-shrink:0;">
-                    <div class="mini-stat">
-                      <div class="mini-label">Edad promedio</div>
-                      <div class="mini-value brand" id="edadMediaValue">—</div>
+                <div class="card-header" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+                  <div>
+                    <div class="card-label">Edad</div>
+                    <h3 class="card-question">Distribución por rango de edad</h3>
+                  </div>
+                  <div style="display:flex;gap:8px;flex-shrink:0;">
+                    <div style="background:var(--blue-bg);border-radius:var(--r-full);padding:6px 12px;display:flex;align-items:center;gap:4px;white-space:nowrap;">
+                      <span style="font-size:11px;font-weight:600;color:var(--txt-1);">Edad promedio:</span>
+                      <span style="font-size:13px;font-weight:800;color:var(--accent-100);" id="edadMediaValue">—</span>
                     </div>
-                    <div class="mini-stat">
-                      <div class="mini-label">Moda de la edad</div>
-                      <div class="mini-value brand" id="edadModaValue">—</div>
+                    <div style="background:var(--blue-bg);border-radius:var(--r-full);padding:6px 12px;display:flex;align-items:center;gap:4px;white-space:nowrap;">
+                      <span style="font-size:11px;font-weight:600;color:var(--txt-1);">Moda edad:</span>
+                      <span style="font-size:13px;font-weight:800;color:var(--accent-100);" id="edadModaValue">—</span>
                     </div>
                   </div>
+                </div>
+                <div style="display:flex;gap:12px;align-items:flex-start;">
                   <div class="chart-wrap h240" style="flex:1;min-width:0;"><canvas id="chartEdad"></canvas></div>
                 </div>
               </div>
@@ -2683,8 +2685,7 @@
 
         <div class="page-footer"
           style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:40px;padding-top:20px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--txt-3);" id="footerInfo">Total encuestados: — · Serpis, Mahou y
-            Snack'in · CC Carrefour Alcobendas y Hortaleza · Del 03 al 09 de junio de 2026</span>
+          <span style="font-size:11px;color:var(--txt-3);" id="footerInfo">Total encuestados: — · Serpis, Mahou y Snack'in · CC Carrefour Hortaleza (Desde el 21 al 28 de mayo) y Alcobendas (Desde el 03 al 09 de julio)</span>
         </div>
 
       </main>
@@ -2749,7 +2750,7 @@
       },
       {
         col: '1qIkcLV5VS7GAxalJJEH', title: 'Recreación del aperitivo',
-        sub: '¿Consumiste los tres productos juntos recreando tu propio momento del aperitivo en casa?',
+        sub: '¿Consumiste los tres productos juntos recreando el momento del aperitivo en casa?',
         type: 'stackedbar', pairEnd: true, section: 'habitos',
         blueGradient: true
       },
@@ -3447,7 +3448,9 @@
         const modeG = groups.reduce((a, b) => gCounts[a] >= gCounts[b] ? a : b);
         document.getElementById('edadMediaValue').textContent = cntAge ? Math.round(sumAge / cntAge) : '—';
         document.getElementById('edadModaValue').textContent = modeG ? modeG.split('-')[0] : '—';
-        makeBar('chartEdad', groups, groups.map(g => gCounts[g]), corporateShades(groups.length), false, true, true, false);
+        const maxCount = Math.max(...groups.map(g => gCounts[g]));
+        const edadColors = groups.map(g => gCounts[g] === maxCount ? '#375395' : 'rgba(55, 83, 149, .4)');
+        makeBar('chartEdad', groups, groups.map(g => gCounts[g]), edadColors, false, true, true, false);
       }
     }
 
@@ -3455,7 +3458,7 @@
     function renderKPIs(rows) {
       const total = rows.length;
       document.getElementById('kpiTotal').textContent = total.toLocaleString('es-ES');
-      document.getElementById('footerInfo').textContent = `Total encuestados: ${total.toLocaleString('es-ES')} · Serpis, Mahou y Snack'in · CC Carrefour Alcobendas y Hortaleza · Del 03 al 09 de junio de 2026`;
+      document.getElementById('footerInfo').textContent = `Total encuestados: ${total.toLocaleString('es-ES')} · Serpis, Mahou y Snack'in · CC Carrefour Hortaleza (Desde el 21 al 28 de mayo) y Alcobendas (Desde el 03 al 09 de julio)`;
 
       // ─ Frecuencia 'Aperitivo': % de respuestas que coinciden con uno de los
       // 4 IDs de respuesta dentro de la columna de frecuencia 5JEl6vZ5f1LBFYdvVe2q
