@@ -377,8 +377,11 @@
     /* TOPBAR */
     .topbar {
       height: var(--nav-h);
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(28px) saturate(200%) brightness(1.08);
+      -webkit-backdrop-filter: blur(28px) saturate(200%) brightness(1.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.85), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -2755,7 +2758,8 @@
       {
         col: 'iMKHmQYreecaiwID5Inm', title: 'Productos del aperitivo',
         sub: '¿Cuáles de los siguientes productos sueles incluir habitualmente en tu momento del aperitivo?',
-        type: 'treemap', multi: true, section: 'habitos', redGradient: true
+        type: 'treemap', multi: true, section: 'habitos', redGradient: true,
+        colorMap: { 'Refrescos o vermut': '#5B1A2A' }
       },
 
       // Q4, Q5, Q6: Consumo (unified with selector)
@@ -2852,7 +2856,7 @@
 
     // ── CHART COLOR HELPER ──
     function getChartColors() {
-      return { tickColor: '#9CA3AF', gridColor: 'rgba(0,0,0,.04)', borderColor: '#FFFFFF' };
+      return { tickColor: '#0F1729', gridColor: 'rgba(0,0,0,.04)', borderColor: '#FFFFFF' };
     }
     function chartDefaults() {
       const c = getChartColors();
@@ -3402,7 +3406,7 @@
           }
           const counts = countSingle(arr); const entries = sortedEntries(counts, 14).filter(e => !HIDDEN_PRODUCTS.has(norm(e[0])));
           if (!entries.length) { const el = document.getElementById(chartId); if (el) el.parentElement.innerHTML = '<div class="no-data">Sin datos disponibles</div>'; return; }
-          const colors = q.colorMap ? entries.map(e => q.colorMap[e[0]] || '#9CA3AF') : entries.map((_, ci) => VARIETY_COLORS[ci % VARIETY_COLORS.length]);
+          const colors = entries.map((e, ci) => (q.colorMap && q.colorMap[e[0]]) ? q.colorMap[e[0]] : VARIETY_COLORS[ci % VARIETY_COLORS.length]);
           const el = document.getElementById(chartId); if (!el) return;
           renderTreemap(el, entries, colors);
         } else if (q.type === 'heatmap') {
