@@ -202,6 +202,7 @@
 
     /* location split */
     .pdist {
+      display: none;
       margin-top: 9px;
       padding-top: 9px;
       border-top: 1px solid var(--border-md)
@@ -1486,6 +1487,162 @@
       background: rgba(0, 0, 0, .8)
     }
 
+    /* SALES DATA TABLES */
+    .data-table-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      box-shadow: var(--sh-sm);
+      overflow: hidden
+    }
+
+    .data-table-head {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .data-table-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      background: var(--brand)
+    }
+
+    .data-table-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--txt-1)
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-variant-numeric: tabular-nums
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 9px 14px;
+      text-align: right;
+      font-size: 12px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .data-table thead th {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--txt-3);
+      background: var(--bg-input)
+    }
+
+    .data-table th:first-child,
+    .data-table td:first-child {
+      text-align: left;
+      font-weight: 600;
+      color: var(--txt-2)
+    }
+
+    .data-table tbody td {
+      font-weight: 700;
+      color: var(--txt-1)
+    }
+
+    .data-table tbody tr:last-child td {
+      border-bottom: none
+    }
+
+    .data-table tbody tr:hover td {
+      background: var(--brand-muted)
+    }
+
+    .data-table .dt-empty {
+      color: var(--txt-3);
+      font-weight: 400
+    }
+
+    /* VIDEO THUMBNAILS */
+    .video-thumb {
+      position: relative;
+      display: block;
+      border-radius: var(--r-md);
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: #000;
+      cursor: pointer;
+      box-shadow: var(--sh-xs);
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none
+    }
+
+    .video-thumb:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--sh-sm)
+    }
+
+    .video-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s
+    }
+
+    .video-thumb:hover img {
+      transform: scale(1.04)
+    }
+
+    .video-play-icon {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(224, 37, 63, .92);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, .4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      pointer-events: none;
+      transition: transform .2s, background .2s
+    }
+
+    .video-thumb:hover .video-play-icon {
+      transform: scale(1.1);
+      background: var(--primary-100)
+    }
+
+    .video-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .video-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--txt-1);
+      line-height: 1.35
+    }
+
+    .media-sub {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--txt-3);
+      margin: 4px 0 10px
+    }
+
     /* LIGHTBOX */
     .lb-overlay {
       display: none;
@@ -2483,6 +2640,113 @@
           </div>
         </div>
 
+        <!-- ── SAMPLING & VENTAS POR CAMPAÑA ── -->
+        <div id="ventas" style="scroll-margin-top:72px;">
+          <div class="section-header">
+            <div class="section-accent"></div>
+            <div class="section-title">Sampling y ventas por campaña</div>
+            <div class="section-line"></div>
+          </div>
+          <div class="g2 row-gap">
+            <div class="data-table-card">
+              <div class="data-table-head">
+                <span class="data-table-dot"></span>
+                <span class="data-table-title">CC Carrefour Hortaleza</span>
+              </div>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>Mahou</th>
+                    <th>Snack'in for you</th>
+                    <th>Serpis</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sampling</td>
+                    <td>6.474</td>
+                    <td>4.163</td>
+                    <td>4.163</td>
+                  </tr>
+                  <tr>
+                    <td>Unidades</td>
+                    <td>519</td>
+                    <td>43</td>
+                    <td>187</td>
+                  </tr>
+                  <tr>
+                    <td>Packs x8</td>
+                    <td>39</td>
+                    <td class="dt-empty">—</td>
+                    <td class="dt-empty">—</td>
+                  </tr>
+                  <tr>
+                    <td>Facturación</td>
+                    <td>347,73 €</td>
+                    <td>89,87 €</td>
+                    <td>338,90 €</td>
+                  </tr>
+                  <tr>
+                    <td>Latas individuales</td>
+                    <td>207</td>
+                    <td class="dt-empty">—</td>
+                    <td class="dt-empty">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="data-table-card">
+              <div class="data-table-head">
+                <span class="data-table-dot"></span>
+                <span class="data-table-title">CC Carrefour Alcobendas</span>
+              </div>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>Mahou</th>
+                    <th>Snack'in for you</th>
+                    <th>Serpis</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sampling</td>
+                    <td>6.901</td>
+                    <td>4.538</td>
+                    <td>4.538</td>
+                  </tr>
+                  <tr>
+                    <td>Unidades</td>
+                    <td>474</td>
+                    <td>124</td>
+                    <td>203</td>
+                  </tr>
+                  <tr>
+                    <td>Packs x8</td>
+                    <td>42</td>
+                    <td class="dt-empty">—</td>
+                    <td class="dt-empty">—</td>
+                  </tr>
+                  <tr>
+                    <td>Facturación</td>
+                    <td>317,58 €</td>
+                    <td>259,16 €</td>
+                    <td>402,55 €</td>
+                  </tr>
+                  <tr>
+                    <td>Latas individuales</td>
+                    <td>138</td>
+                    <td class="dt-empty">—</td>
+                    <td class="dt-empty">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
         <!-- ── KPIs ── -->
         <div id="kpis" style="scroll-margin-top:72px;">
           <div class="section-header">
@@ -2675,6 +2939,21 @@
           <div class="insight-grid row-gap" id="insightsContainer"></div>
         </div>
 
+        <!-- ── MEDIA ── -->
+        <div id="media" style="scroll-margin-top:72px;">
+          <div class="section-header">
+            <div class="section-accent"></div>
+            <div class="section-title">Media</div>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="media-sub">Fotos</div>
+          <div class="photo-grid" id="mediaPhotos" style="grid-template-columns:repeat(5,1fr);"></div>
+
+          <div class="media-sub" style="margin-top:18px;">Vídeos</div>
+          <div class="row-gap" id="mediaVideos" style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--content-gap);"></div>
+        </div>
+
         <!-- LIGHTBOX (kept for compatibility, no photos in this campaign) -->
         <div class="lb-overlay" id="lbOverlay" onclick="closeLightboxOnBg(event)">
           <button class="lb-close" onclick="closeLightbox()" aria-label="Cerrar">✕</button>
@@ -2752,7 +3031,7 @@
         col: '1qIkcLV5VS7GAxalJJEH', title: 'Recreación del aperitivo',
         sub: '¿Consumiste los tres productos juntos recreando el momento del aperitivo en casa?',
         type: 'stackedbar', pairEnd: true, section: 'habitos',
-        blueGradient: true
+        blueGradient: true, sortByScore: true
       },
 
       // Q2: Productos del aperitivo
@@ -3250,7 +3529,9 @@
             const arr = getColData(rows, pIdx);
             const counts = countSingle(arr);
             const entries = sortedEntries(counts, 14);
-            return { name: p.name, color: p.color, entries };
+            const total = entries.reduce((sum, e) => sum + e[1], 0);
+            const filtered = entries.filter(e => (e[1] / total) >= 0.01);
+            return { name: p.name, color: p.color, entries: filtered };
           });
 
           window.switchConsumoChart = function (cid, pIdx) {
@@ -3353,7 +3634,13 @@
         } else if (q.type === 'stackedbar') {
           const arr = getColData(rows, idx);
           const counts = countSingle(arr);
-          const labels = (q.fixedOrder && q.fixedOrder.length) ? q.fixedOrder : Object.keys(counts);
+          let labels;
+          if (q.sortByScore) {
+            const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+            labels = entries.map(e => e[0]);
+          } else {
+            labels = (q.fixedOrder && q.fixedOrder.length) ? q.fixedOrder : Object.keys(counts);
+          }
           const data = labels.map(l => {
             const normLabel = norm(l);
             const matchKey = Object.keys(counts).find(k => norm(k) === normLabel);
@@ -3800,13 +4087,76 @@
       finally { btn.innerHTML = orig; btn.disabled = false; }
     });
 
-    // ── LIGHTBOX (no photos in this campaign, kept for compatibility) ──
-    const LB_SRCS = [];
-    function openLightbox(idx) { }
+    // ── MEDIA (Google Drive photos + YouTube videos) ──
+    const MEDIA_PHOTOS = [
+      '1b2-nAtQ0SS_t0UgXCDI1Kzt74q063P6z',
+      '1zjDx_XI7y8YlPdEfrtgVG84nRg7A7qr1',
+      '17MVwoAOxbD29y0fJ2VV5baTpWabaZ6D4',
+      '1hXp-wNowrjBiO4dWZmTkj8c1z4eJDZYf',
+      '1fF8Au3ib_S2pJGBmIwQoqOOiUiP18o7R',
+    ];
+    const MEDIA_VIDEOS = [
+      { id: 'Ch0UuFB2mYA', title: "Campaña Mahou, Snack'in For You y Serpis - Samplia Alcobendas" },
+      { id: 'D9CL8lIXn0o', title: "Campaña Mahou, Snack'in For You y Serpis - Samplia Hortaleza" },
+    ];
+
+    const driveThumb = (id, w) => `https://drive.google.com/thumbnail?id=${id}&sz=w${w}`;
+
+    // Lightbox sources (full-size Drive previews)
+    const LB_SRCS = MEDIA_PHOTOS.map(id => driveThumb(id, 1920));
+    let lbIdx = 0;
+
+    function buildMedia() {
+      const ph = document.getElementById('mediaPhotos');
+      if (ph) {
+        ph.innerHTML = MEDIA_PHOTOS.map((id, i) => `
+          <div class="photo-thumb" onclick="openLightbox(${i})">
+            <img src="${driveThumb(id, 1000)}" alt="Foto ${i + 1}" loading="lazy" referrerpolicy="no-referrer">
+            <div class="photo-zoom-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </div>
+          </div>`).join('');
+      }
+      const vid = document.getElementById('mediaVideos');
+      if (vid) {
+        vid.innerHTML = MEDIA_VIDEOS.map((v, i) => `
+          <div class="video-item">
+            <a class="video-thumb" href="https://youtu.be/${v.id}" target="_blank" rel="noopener" aria-label="${v.title}">
+              <img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt="${v.title}" loading="lazy">
+              <div class="video-play-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </a>
+            <div class="video-title">${v.title}</div>
+          </div>`).join('');
+      }
+    }
+
+    // ── LIGHTBOX ──
+    function openLightbox(idx) {
+      if (!LB_SRCS.length) return;
+      lbIdx = (idx + LB_SRCS.length) % LB_SRCS.length;
+      const img = document.getElementById('lbImg');
+      img.src = LB_SRCS[lbIdx];
+      img.setAttribute('referrerpolicy', 'no-referrer');
+      document.getElementById('lbOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
     function closeLightbox() { document.getElementById('lbOverlay').classList.remove('open'); document.body.style.overflow = ''; }
     function closeLightboxOnBg(e) { if (e.target === document.getElementById('lbOverlay')) closeLightbox(); }
-    function lbNav(dir) { }
+    function lbNav(dir) { openLightbox(lbIdx + dir); }
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('lbOverlay').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowLeft') lbNav(-1);
+      else if (e.key === 'ArrowRight') lbNav(1);
+    });
     window.openLightbox = openLightbox; window.closeLightbox = closeLightbox; window.closeLightboxOnBg = closeLightboxOnBg; window.lbNav = lbNav;
+    buildMedia();
 
     // ── INIT ──
     buildDynamicCharts();
